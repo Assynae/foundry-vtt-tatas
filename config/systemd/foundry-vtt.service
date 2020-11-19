@@ -8,7 +8,7 @@ Environment=FOUNDRY_PORT=30000
 Environment=FOUNDRY_HOME=/foundry
 Type=simple
 User=root
-ExecStart=/usr/bin/node $FOUNDRY_HOME/foundryvtt/resources/app/main.js --dataPath=$FOUNDRY_HOME/foundrydata
+ExecStart=/usr/bin/node ${FOUNDRY_HOME}/foundryvtt/resources/app/main.js --dataPath=${FOUNDRY_HOME}/foundrydata
 Restart=on-failure
 
 [Install]
