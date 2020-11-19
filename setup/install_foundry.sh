@@ -13,7 +13,7 @@ cd foundryvtt
 
 read -p 'Download Foundry VTT? [y/n] ' download
 
-if [ $download -eq "y" ]; then
+if [ $download = "y" ]; then
 	read -p 'Please enter Foundry VTT server (node.js) download URL: ' FOUNDY_DOWNLOAD_URL
 
 	echo "Downloading Foundry VTT..."
