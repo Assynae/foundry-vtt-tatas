@@ -11,7 +11,7 @@ sudo mkdir foundrydata
 # Install the software
 cd foundryvtt
 
-read FOUNDY_DOWNLOAD_URL
+read -p 'Please enter Foundry VTT server (node.js) download URL: ' FOUNDY_DOWNLOAD_URL
 
 sudo wget -O foundryvtt.zip "$FOUNDY_DOWNLOAD_URL"
 sudo unzip foundryvtt.zip
