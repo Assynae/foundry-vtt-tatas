@@ -1,3 +1,5 @@
 # Start running the foundry server
 
-node resources/app/main.js --dataPath=$HOME/foundrydata
+FOUNDRY_HOME=/foundry
+
+node resources/app/main.js --dataPath=$FOUNDRY_HOME/foundrydata

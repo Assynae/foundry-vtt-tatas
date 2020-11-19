@@ -1,7 +1,10 @@
-# Install foundy
+# Install foundry
 
 # Create application and user data directories
-cd $HOME
+
+FOUNDRY_HOME=/foundry
+
+cd $FOUNDRY_HOME
 mkdir foundryvtt
 mkdir foundrydata
 
