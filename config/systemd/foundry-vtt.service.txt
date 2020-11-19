@@ -1,0 +1,15 @@
+[Unit]
+Description=A service to run the Foundry VTT node app
+Documentation=https://foundryvtt.com
+After=network.target
+
+[Service]
+Environment=FOUNDRY_PORT=30000
+Environment=FOUNDRY_HOME=/foundry
+Type=simple
+User=ryan
+ExecStart=/usr/bin/node $FOUNDRY_HOME/foundryvtt/resources/app/main.js --dataPath=$FOUNDRY_HOME/foundrydata
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
