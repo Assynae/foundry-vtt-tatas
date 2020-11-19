@@ -3,6 +3,7 @@
 # Create application and user data directories
 
 FOUNDRY_HOME=/foundry
+SETUP_DIR=`pwd`
 
 cd $FOUNDRY_HOME
 sudo mkdir -p foundryvtt
@@ -24,5 +25,5 @@ fi
 
 # Create systemd service
 echo "Setting system service for Foundry VTT..."
-sudo cp ../config/systemd/foundry-vtt.service /etc/systemd/system/
+sudo cp $SETUP_DIR/../config/systemd/foundry-vtt.service /etc/systemd/system/
 sudo systemctl daemon-reload
