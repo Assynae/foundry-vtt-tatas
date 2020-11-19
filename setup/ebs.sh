@@ -1,9 +1,12 @@
 # Format EBS volume to ext4 and mount it
 
 VOLUME=/dev/xvdb
-VOLUME_DIR=/foundry
+VOLUME_DIR=/foundry/foundrydata
 
-sudo mkfs -t ext4 $VOLUME
-sudo mkdir /foundry
+# If you want to format the EBS volume
+#mkfs -t ext4 $VOLUME
 
-sudo mount $VOLUME $VOLUME_DIR
+mkdir -p $VOLUME_DIR
+mount $VOLUME $VOLUME_DIR
+
+# To unmount: sudo umount -d /dev/xvdb
